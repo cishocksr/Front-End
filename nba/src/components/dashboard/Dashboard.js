@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import PlayerCard from './PlayerCard.js';
+import { CardsWrapper, DashForm, Label } from './styledComponent.js'
 import axios from 'axios';
 
 const Dashboard = props => {
@@ -13,23 +14,28 @@ const Dashboard = props => {
 
     return (
         <div>
-            <form>
-                <label>Team: </label>
+            <h1>Compare Players</h1>
+            <DashForm>
+                <div>
+                <Label>Team: </Label>
                 <select name='team' value={player.team} onChange={changePlayer} >
                     <option value='Select...'>Select...</option>
-                    <option value='Lakers'>Lakers</option>
+                    <option value='Lakers'>Los Angeles Lakers</option>
                 </select>
-                <label>Player: </label>
+                </div>
+                <div>
+                <Label>Player: </Label>
                 <select name='name' value={player.name} onChange={changePlayer}>
                     <option value='Select...'>Select...</option>
                     <option value='Lebron James'>Lebron James</option>
                 </select>
-            </form>
+                </div>
+            </DashForm>
             {/* Need Styling For wrapper to hold both cards */}
-            <div>
+            <CardsWrapper>
                 <PlayerCard/>
                 <PlayerCard/>
-            </div>
+            </CardsWrapper>
         </div>
     )
 }
