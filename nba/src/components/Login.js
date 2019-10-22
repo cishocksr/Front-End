@@ -21,7 +21,7 @@ const Login = () => {
       <label>Password</label>
       <input type="password" ref={register} name='password' />
 
-      <button type='submit'>Submit!</button>
+      <button type='submit'>Login</button>
     </form>
   )
 }
