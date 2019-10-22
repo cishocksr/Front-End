@@ -22,7 +22,7 @@ const AccountCreation = () => {
       <label>Password</label>
       <input type="password" ref={register} name='password' />
 
-      <button type='submit'>Submit!</button>
+      <button type='submit'>Create Account</button>
     </form>
   )
 }
