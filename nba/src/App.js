@@ -13,18 +13,15 @@ function App() {
           <h2>
             Welcome to NBA Career Longevity Projector
           </h2>
-          <Link to='/Login'>
-          <p>
-            Login In Now
-            <Route exact path="/login" component={Login} />
-          </p>
+          <Link to='/login'>
+            <p>Log In Now!</p>
           </Link>
+          <Route exact path="/login" component={Login} />
           <Link to='/account'>
-          <p>
-            Sign Up Now  
-            <PrivateRoute path = '/account' component = {AccountCreation} />
-          </p>
+            <p>Sign Up Now!</p>
           </Link>
+          <PrivateRoute path='/account' component = {AccountCreation} />
+
         </header>
       </div>
     </Router>
